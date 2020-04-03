@@ -1,0 +1,37 @@
+﻿生成启动时间为 2020/4/3 9:45:42。
+     1>项目“C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Squish_x86_SSE2.vcxproj”在节点 7 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.. /ZI /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SQUISH_X86_SSE2_EXPORTS /D SQUISH_USE_SSE=2 /D SQUISH_USE_OPENMP=1 /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\alpha.cpp ..\clusterfit.cpp ..\colourblock.cpp ..\colourfit.cpp ..\colourset.cpp ..\maths.cpp ..\rangefit.cpp ..\singlecolourfit.cpp ..\squish.cpp ..\squishinterface.cpp
+         squishinterface.cpp
+         squish.cpp
+         singlecolourfit.cpp
+         rangefit.cpp
+         maths.cpp
+         colourset.cpp
+         colourfit.cpp
+         colourblock.cpp
+         clusterfit.cpp
+         alpha.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Squish.res" ..\Squish.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.lib" /MACHINE:X86 /SAFESEH /DLL Debug\Squish.res
+         Debug\alpha.obj
+         Debug\clusterfit.obj
+         Debug\colourblock.obj
+         Debug\colourfit.obj
+         Debug\colourset.obj
+         Debug\maths.obj
+         Debug\rangefit.obj
+         Debug\singlecolourfit.obj
+         Debug\squish.obj
+         Debug\squishinterface.obj
+     1>alpha.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+            正在创建库 C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.lib 和对象 C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.exp
+         Squish_x86_SSE2.vcxproj -> C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Debug\Squish_x86_SSE2.dll
+     1>已完成生成项目“C:\Users\Administrator\Desktop\paint.net-master\src\DdsFileType\Squish\Squish_x86_SSE2\Squish_x86_SSE2.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.93

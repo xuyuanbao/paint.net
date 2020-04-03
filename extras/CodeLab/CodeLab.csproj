@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.50727</ProductVersion>
@@ -26,6 +27,24 @@
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -74,21 +93,9 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PaintDotNet.Effects">
-      <Name>PaintDotNet.Effects</Name>
-      <HintPath>..\..\src\bin\Release\PaintDotNet.Effects.dll</HintPath>
-    </Reference>
     <Reference Include="PaintDotNet.Resources, Version=2.6.2228.30389, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\src\bin\Debug\PaintDotNet.Resources.dll</HintPath>
-    </Reference>
-    <Reference Include="PaintDotNet.SystemLayer">
-      <Name>PaintDotNet.SystemLayer</Name>
-      <HintPath>..\..\src\bin\Release\PaintDotNet.SystemLayer.dll</HintPath>
-    </Reference>
-    <Reference Include="PdnLib">
-      <Name>PdnLib</Name>
-      <HintPath>..\..\src\bin\Release\PdnLib.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -131,6 +138,32 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icons\CodeLab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PublicBase\Core\Core.csproj">
+      <Project>{1eade568-a866-4dd4-9898-0a151e3f0e26}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicBase\Effects\Effects.csproj">
+      <Project>{2e4e8805-00f7-4b18-a967-c23994bbce75}</Project>
+      <Name>Effects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicBase\SystemLayer\SystemLayer.csproj">
+      <Project>{80572820-93a5-4278-a513-d902bea2639c}</Project>
+      <Name>SystemLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

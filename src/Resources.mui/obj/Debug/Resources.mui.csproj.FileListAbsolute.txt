@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\Resources.mui\bin\Debug\Resources.mui.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\Resources.mui\bin\Debug\Resources.mui.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\Resources.mui\obj\Debug\Resources.mui.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\Resources.mui\obj\Debug\Resources.mui.pdb

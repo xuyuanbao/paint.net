@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\UpdateMonitor\bin\Debug\UpdateMonitor.exe.config
+C:\Users\Administrator\Desktop\paint.net-master\src\UpdateMonitor\bin\Debug\UpdateMonitor.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\UpdateMonitor\bin\Debug\UpdateMonitor.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\UpdateMonitor\obj\Debug\UpdateMonitor.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\UpdateMonitor\obj\Debug\UpdateMonitor.pdb

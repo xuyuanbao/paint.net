@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\PdnRepair\bin\Debug\PdnRepair.exe.config
+C:\Users\Administrator\Desktop\paint.net-master\src\PdnRepair\bin\Debug\PdnRepair.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\PdnRepair\bin\Debug\PdnRepair.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\PdnRepair\obj\Debug\PdnRepair.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\PdnRepair\obj\Debug\PdnRepair.pdb

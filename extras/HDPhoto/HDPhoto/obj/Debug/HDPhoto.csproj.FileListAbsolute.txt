@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\obj\Debug\PaintDotNet.Data.HDPhotoSaveConfigWidget.resources
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\obj\Debug\PaintDotNet.Data.Strings.resources
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\obj\Debug\HDPhoto.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\bin\Debug\HDPhoto.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\bin\Debug\HDPhoto.pdb
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\bin\Debug\PresentationCore.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\obj\Debug\HDPhoto.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\HDPhoto\HDPhoto\obj\Debug\HDPhoto.pdb

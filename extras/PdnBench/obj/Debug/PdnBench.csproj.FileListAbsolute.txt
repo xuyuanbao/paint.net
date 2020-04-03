@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\paint.net-master\extras\PdnBench\bin\Debug\PdnBench.exe
+C:\Users\Administrator\Desktop\paint.net-master\extras\PdnBench\bin\Debug\PdnBench.pdb
+C:\Users\Administrator\Desktop\paint.net-master\extras\PdnBench\obj\Debug\PdnBench.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\paint.net-master\extras\PdnBench\obj\Debug\PdnBench.exe
+C:\Users\Administrator\Desktop\paint.net-master\extras\PdnBench\obj\Debug\PdnBench.pdb

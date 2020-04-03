@@ -30,7 +30,7 @@ namespace PaintDotNet.Effects
         }
 
         public CodeLab()
-            : base("Code Lab", StaticImage, true)
+            : base("Code Lab", StaticImage)
         {
         }
 

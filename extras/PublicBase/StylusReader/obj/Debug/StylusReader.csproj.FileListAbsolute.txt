@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\bin\Debug\PaintDotNet.StylusReader.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\bin\Debug\PaintDotNet.StylusReader.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\bin\Debug\Microsoft.Ink.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\bin\Debug\Microsoft.Ink.xml
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\obj\Debug\PaintDotNet.StylusReader.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\obj\Debug\PaintDotNet.StylusReader.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\StylusReader\obj\Debug\StylusReader.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\StylusReader\bin\Debug\PaintDotNet.StylusReader.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\StylusReader\bin\Debug\PaintDotNet.StylusReader.pdb
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\StylusReader\obj\Debug\PaintDotNet.StylusReader.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\StylusReader\obj\Debug\PaintDotNet.StylusReader.pdb

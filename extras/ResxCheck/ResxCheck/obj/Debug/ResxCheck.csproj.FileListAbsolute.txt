@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\paint.net-master\extras\ResxCheck\ResxCheck\bin\Debug\ResxCheck.exe
+C:\Users\Administrator\Desktop\paint.net-master\extras\ResxCheck\ResxCheck\bin\Debug\ResxCheck.pdb
+C:\Users\Administrator\Desktop\paint.net-master\extras\ResxCheck\ResxCheck\obj\Debug\ResxCheck.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\paint.net-master\extras\ResxCheck\ResxCheck\obj\Debug\ResxCheck.exe
+C:\Users\Administrator\Desktop\paint.net-master\extras\ResxCheck\ResxCheck\obj\Debug\ResxCheck.pdb

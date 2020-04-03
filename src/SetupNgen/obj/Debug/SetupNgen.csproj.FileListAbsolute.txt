@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\obj\Debug\SetupNgen.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\SetupNgen.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\SetupNgen.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.Base.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.Resources.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.SystemLayer.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.StylusReader.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\Interop.WIA.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\Microsoft.Ink.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.Base.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.Resources.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.SystemLayer.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\PaintDotNet.StylusReader.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\bin\Debug\Microsoft.Ink.xml
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\obj\Debug\SetupNgen.exe
+C:\Users\Administrator\Desktop\paint.net-master\src\SetupNgen\obj\Debug\SetupNgen.pdb

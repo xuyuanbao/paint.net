@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="C:\Users\Administrator\Desktop\paint.net-master\src\Resources\bin\Debug\PaintDotNet.Resources.dll">
+   <Modules>
+    <Module Name="paintdotnet.resources.dll">
+     <Namespaces>
+      <Namespace Name="PaintDotNet">
+       <Types>
+        <Type Name="PdnInfo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetIsFinalBuild()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2020-04-01 10:02:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Administrator\Desktop\paint.net-master\src\Resources" File="PdnInfo.cs" Line="112">由于 'string.IndexOf(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'PdnInfo.GetIsFinalBuild()' 中的此调用替换为对 'string.IndexOf(string, StringComparison)' 的调用。如果要向用户显示 'string.IndexOf(string, StringComparison)' 的结果(例如，在对一个项列表进行排序以便在列表框中显示时)，请指定“StringComparison.CurrentCulture”或“StringComparison.CurrentCultureIgnoreCase”作为“StringComparison”参数。如果比较不区分大小写的标识符(例如，文件路径、环境变量或注册表项和值)，则指定“StringComparison.OrdinalIgnoreCase”。或者，如果比较区分大小写的标识符，则指定“StringComparison.Ordinal”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LaunchWebSite(System.Windows.Forms.IWin32Window,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2020-04-01 10:02:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Administrator\Desktop\paint.net-master\src\Resources" File="PdnInfo.cs" Line="405">由于 'string.IndexOf(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'PdnInfo.LaunchWebSite(IWin32Window, string)' 中的此调用替换为对 'string.IndexOf(string, StringComparison)' 的调用。如果要向用户显示 'string.IndexOf(string, StringComparison)' 的结果(例如，在对一个项列表进行排序以便在列表框中显示时)，请指定“StringComparison.CurrentCulture”或“StringComparison.CurrentCultureIgnoreCase”作为“StringComparison”参数。如果比较不区分大小写的标识符(例如，文件路径、环境变量或注册表项和值)，则指定“StringComparison.OrdinalIgnoreCase”。或者，如果比较区分大小写的标识符，则指定“StringComparison.Ordinal”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>指定 StringComparison</Name>
+   <Description>如果存在采用 StringComparison 参数的重载，则始终先调用此重载，而不是那些不接受该参数的重载。</Description>
+   <Resolution Name="Default">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果要向用户显示 {2} 的结果(例如，在对一个项列表进行排序以便在列表框中显示时)，请指定“StringComparison.CurrentCulture”或“StringComparison.CurrentCultureIgnoreCase”作为“StringComparison”参数。如果比较不区分大小写的标识符(例如，文件路径、环境变量或注册表项和值)，则指定“StringComparison.OrdinalIgnoreCase”。或者，如果比较区分大小写的标识符，则指定“StringComparison.Ordinal”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

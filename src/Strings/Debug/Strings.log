@@ -1,0 +1,8 @@
+﻿生成启动时间为 2020/4/3 13:43:36。
+     1>项目“C:\Users\Administrator\Desktop\paint.net-master\src\Strings\Strings.vcxproj”在节点 7 上(Rebuild 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.MakeFile.Targets(42,5): warning MSB8005: The property 'NMakeReBuildCommandLine' doesn't exist.  Skipping...
+     1>已完成生成项目“C:\Users\Administrator\Desktop\paint.net-master\src\Strings\Strings.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.27

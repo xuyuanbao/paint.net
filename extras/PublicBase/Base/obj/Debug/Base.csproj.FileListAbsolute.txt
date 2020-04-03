@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\paint.net-master\src\Base\bin\Debug\PaintDotNet.Base.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\Base\bin\Debug\PaintDotNet.Base.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\Base\obj\Debug\PaintDotNet.Base.dll
+C:\Users\Administrator\Desktop\paint.net-master\src\Base\obj\Debug\PaintDotNet.Base.pdb
+C:\Users\Administrator\Desktop\paint.net-master\src\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\Base\bin\Debug\PaintDotNet.Base.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\Base\bin\Debug\PaintDotNet.Base.pdb
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\Base\obj\Debug\PaintDotNet.Base.dll
+C:\Users\Administrator\Desktop\paint.net-master\extras\PublicBase\Base\obj\Debug\PaintDotNet.Base.pdb

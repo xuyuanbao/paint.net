@@ -1,0 +1,1 @@
+resgen PaintDotNet.Strings.3.ZH-CN.resx PaintDotNet.Strings.3.ZH-CN.resources /str:C#,PaintDotNet,PdnResources,aintDotNet.Strings.3.ZH-CN.cs

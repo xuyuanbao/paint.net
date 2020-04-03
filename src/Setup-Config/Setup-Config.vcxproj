@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Setup Config</ProjectName>
+    <ProjectGuid>{40A8C52E-F2F8-49D7-A825-A0411BD7306A}</ProjectGuid>
+    <RootNamespace>Paint.NET Setup Config</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)Setup-Config.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Setup-Config.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>Making setup packages ...</Message>
+      <Command>if "%25SIGNPDN%25" == "1" set COMPRESS=/DCompress
+
+echo Settings some last minute MSI properties...
+call "$(ProjectDir)\SetMsiProperties.bat" "$(SolutionDir)\Setup\$(Configuration)\PaintDotNet.msi"
+
+if "%25SIGNPDN%25" == "1" echo Signing MSI ...
+call "$(SolutionDir)signfile.bat" "$(SolutionDir)\Setup\$(Configuration)\PaintDotNet.msi"
+
+rem Ensure that the NSIS stubs have a UAC requireAdministrator manifest
+md ..\BuildTools\Stubs
+copy ..\BuildTools\Stubs_needManifest\* ..\BuildTools\Stubs\
+
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\bzip2 ..\Manifests\requireAdministrator.xml
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\bzip2_solid ..\Manifests\requireAdministrator.xml
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\lzma ..\Manifests\requireAdministrator.xml
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\lzma_solid ..\Manifests\requireAdministrator.xml
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\zlib ..\Manifests\requireAdministrator.xml
+call ..\Manifests\embedManifest.bat ..\BuildTools\Stubs\zlib_solid ..\Manifests\requireAdministrator.xml
+
+echo Making installer ...
+..\BuildTools\makensis /D$(Configuration) %25COMPRESS%25 MakeSetup.nsi
+
+if "%25SIGNPDN%25" == "1" echo Signing installer ...
+call "$(SolutionDir)signfile.bat" "$(SolutionDir)\Setup\$(Configuration)\PaintDotNetSetup.exe"
+
+echo Making full installer ...
+..\BuildTools\makensis /DFullInstaller %25COMPRESS%25 /D$(Configuration) MakeSetup.nsi
+
+if "%25SIGNPDN%25" == "1" echo Signing full installer ...
+call "$(SolutionDir)signfile.bat" "$(SolutionDir)\Setup\$(Configuration)\PaintDotNetWithDotNetSetup.exe"
+
+echo Packaging things up...
+set PDNAME=3_0
+
+pushd "$(SolutionDir)\Setup\$(Configuration)\"
+
+copy PaintDotNetSetup.exe PaintDotNet_%25PDNAME%25.exe
+"$(SolutionDir)\BuildTools\zip" -9 PaintDotNet_%25PDNAME%25.zip PaintDotNet_%25PDNAME%25.exe
+
+copy PaintDotNetWithDotNetSetup.exe PaintDotNet_%25PDNAME%25_WithDotNet.exe
+"$(SolutionDir)\BuildTools\zip" -9 PaintDotNet_%25PDNAME%25_WithDotNet.zip PaintDotNet_%25PDNAME%25_WithDotNet.exe
+
+rem "$(SolutionDir)\BuildTools\zip" -0 PaintDotNet_%25PDNAME%25_All.zip PaintDotNet_%25PDNAME%25_WithDotNet.zip PaintDotNet_%25PDNAME%25.zip
+
+popd
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)Setup-Config.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dummy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MakeSetup.nsi" />
+    <None Include="SetMsiProperties.bat" />
+    <None Include="WiRunSQL.vbs" />
+    <None Include="Bootstrap\Config.ini" />
+    <None Include="Bootstrap\Settings.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DdsFileType\Squish\Squish_x64\Squish_x64.vcxproj">
+      <Project>{ef345808-905d-4738-bc3f-0d0cb3960c4a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Effects\Effects.csproj">
+      <Project>{2e4e8805-00f7-4b18-a967-c23994bbce75}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{0b173113-1f9b-4939-a62f-a176336f13ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellExtension\ShellExtension_x64\ShellExtension_x64.vcxproj">
+      <Project>{36f6fd0e-c4a7-45b9-9b7c-7dfc6de667fe}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

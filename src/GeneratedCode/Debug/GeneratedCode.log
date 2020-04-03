@@ -1,0 +1,21 @@
+﻿生成启动时间为 2020/4/3 13:43:35。
+     1>项目“C:\Users\Administrator\Desktop\paint.net-master\src\GeneratedCode\GeneratedCode.vcxproj”在节点 4 上(Rebuild 个目标)。
+     1>Rebuild:
+         set VCInstallDir=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\..\..\VC\
+         call "%VCInstallDir%vcvarsall.bat"
+         
+         pushd "C:\Users\Administrator\Desktop\paint.net-master\src\\Data"
+         "%VCInstallDir%\bin\cl.exe" /nologo /C /EP UserBlendOps.Generated.H.cs > UserBlendOps.Generated.cs.temp
+         fc UserBlendOps.Generated.cs.temp UserBlendOps.Generated.cs > nul
+         if "%ERRORLEVEL%" == "0" goto done1
+         copy UserBlendOps.Generated.cs.temp UserBlendOps.Generated.cs
+         :done1
+         del UserBlendOps.Generated.cs.temp
+         popd
+         
+         UserBlendOps.Generated.H.cs
+     1>已完成生成项目“C:\Users\Administrator\Desktop\paint.net-master\src\GeneratedCode\GeneratedCode.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.17
